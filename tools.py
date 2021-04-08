@@ -50,17 +50,17 @@ def binary_search(arr, num):
 
 # ex 2
 @timeit
-def direct_search(s, x):
+def direct_search(main_s, sub_s):
     i = j = 0
-    length_s = len(s)
-    length_x = len(x)
-    while i <= length_s - length_x and j < length_x:
-        if s[i + j] == x[j]:
+    length_main = len(main_s)
+    length_sub = len(sub_s)
+    while i <= length_main - length_sub and j < length_sub:
+        if main_s[i + j] == sub_s[j]:
             j += 1
         else:
             i += 1
             j = 0
-    return i if j == length_x else None
+    return i if j == length_sub else None
 
 
 def predkompil(x):
